@@ -23,8 +23,8 @@ $faq = [
     "secondary_list_second" => "Google LLC, con sede negli Stati Uniti, per il resto del mondo."
   ],
   [
-    "domanda"=> "Stabilire il paese associato al tuo account",
-    "risposta"=> "Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell'ultimo anno. I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l'associazione del paese. Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. Contattaci se ritieni che il paese associato al tuo account sia sbagliato."
+    "domanda" => "Stabilire il paese associato al tuo account",
+    "risposta" => "Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell'ultimo anno. I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l'associazione del paese. Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. Contattaci se ritieni che il paese associato al tuo account sia sbagliato."
   ]
 ];
 ?>
@@ -37,28 +37,31 @@ $faq = [
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <title>Google FAQ </title>
 </head>
 
 <body>
-
-  <?php foreach ($faq as $element) : ?>
-    <h2><?= $element["domanda"]; ?></h2>
-    <p><?= $element["risposta"]; ?></p>
-    <?php if ($element["list"]) : ?>
-      <ol>
-        <li><?= $element["list"]; ?></li>
-        <ul>
-          <li><?= $element["secondary_list"]; ?></li>
-          <li><?= $element["secondary_list_second"]; ?></li>
-        </ul>
-        <li><?= $element["second_list"]; ?></li>
-      </ol>
-    <?php endif; ?>
-  <?php endforeach; ?>
-
-
-
+  <div class="container">
+    <?php foreach ($faq as $element) : ?>
+      <section>
+        <h2><?= $element["domanda"]; ?></h2>
+        <p><?= $element["risposta"]; ?></p>
+      </section>
+      <?php if ($element["list"]) : ?>
+        <ol>
+          <li><?= $element["list"]; ?></li>
+          <ul>
+            <li><?= $element["secondary_list"]; ?></li>
+            <li><?= $element["secondary_list_second"]; ?></li>
+          </ul>
+          <li><?= $element["second_list"]; ?></li>
+        </ol>
+      <?php endif; ?>
+    <?php endforeach; ?>
+  </div>
 </body>
 
 </html>

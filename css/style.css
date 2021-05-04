@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; 
+}
+
+/* mix */
+
+h2 {
+  color: #3C4043;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+p {
+ color: #212121;
+ line-height: 20px;
+
+}
+.container {
+  width: 60%;
+  margin: 100px auto;
+}
+
+section {
+  margin: 50px 0;
+}
+
+ol {
+  margin: 0 20px;
+}
+ul {
+  margin: 30px 20px;
+}
+
+li {
+  margin-top: 20px;
+}
